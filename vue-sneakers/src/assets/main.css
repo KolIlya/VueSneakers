@@ -1,5 +1,48 @@
+/* eslint-disable */
 @import "tailwindcss";
 
-body {
-    background-color: rgba(231, 246, 255, 1);
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* Базовый фон и текст */
+  body {
+    @apply bg-cyan-100 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors;
+  }
+
+  /* Заголовки */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  /* Для навигации в Header */
+  .nav-item {
+    @apply text-gray-500 dark:text-gray-400 cursor-pointer hover:text-black dark:hover:text-white transition-colors;
+  }
+
+  /* Для вторичного текста (описания) */
+  .text-muted {
+    @apply text-slate-400 dark:text-gray-500;
+  }
+
+  /* Для карточек товаров */
+  .card {
+    @apply bg-white dark:bg-gray-800 border-slate-200 dark:border-gray-700 shadow-md hover:shadow-2xl transition-all;
+  }
+
+  /* Для границ */
+  .border-primary {
+    @apply border-slate-200 dark:border-gray-700;
+  }
+
+  /* Для drawer/модальных окон */
+  .drawer {
+    @apply bg-white dark:bg-gray-900;
+  }
+
+  /* Для SVG иконок (инвертирует в тёмной теме) */
+  .icon-auto {
+    @apply dark:invert dark:opacity-75;
+  }
 }
