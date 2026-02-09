@@ -12,11 +12,14 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "-": "^0.0.1",
     "@tailwindcss/vite": "^4.1.18",
+    "axios": "^1.13.5",
+    "json-server": "^0.17.4",
     "sass-embedded": "^1.97.3",
     "vue": "^3.5.27"
   },

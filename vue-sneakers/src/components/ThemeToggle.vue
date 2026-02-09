@@ -1,9 +1,9 @@
 <template>
   <button
-    @click="toggleTheme"
     class="relative inline-flex h-6 w-12 items-center rounded-full transition-colors focus:outline-none"
     :class="isDark ? 'bg-blue-600' : 'bg-gray-300'"
     aria-label="Переключить тему"
+    @click="toggleTheme"
   >
     <!-- Переключатель -->
     <span
